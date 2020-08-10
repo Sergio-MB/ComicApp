@@ -1,0 +1,12 @@
+<h1>Results founds for "{{term}}": <small>{{heros.length}}</small></h1>
+<hr />
+<div class="row" *ngIf="heros.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info animated fadeIn fast" role="alert">
+            Not found results!
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-hero-card [hero]="hero" [index]="hero.index" *ngFor="let hero of heros"></app-hero-card>
+</div>
